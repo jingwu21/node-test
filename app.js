@@ -6,9 +6,12 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 
 app.get("/", (req, res, next) => {
-  res.send("<h2>Hello, Mr.Wu</h2>");
+  res.status(200);
+  res.send("Hello, Mr.Wu");
 });
 
 app.listen(port, () => {
   console.log("Listening on port: " + port);
 });
+
+module.exports = app;
