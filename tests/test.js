@@ -11,7 +11,7 @@ describe("Greetings", () => {
   describe("GET /", () => {
     it("should return hello", (done) => {
       chai
-        .request(app.listen(4000))
+        .request(app)
         .get("/")
         .end((err, res) => {
           res.should.have.status(200);
